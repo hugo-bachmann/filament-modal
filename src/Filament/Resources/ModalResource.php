@@ -2,6 +2,9 @@
 
 namespace HugoBachmann\FilamentModal\Filament\Resources;
 
+use Filament\Forms\Components\Builder;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -14,6 +17,7 @@ use HugoBachmann\FilamentModal\Filament\Resources\ModalResource\CreateModal;
 use HugoBachmann\FilamentModal\Filament\Resources\ModalResource\EditModal;
 use HugoBachmann\FilamentModal\Filament\Resources\ModalResource\ListModal;
 use HugoBachmann\FilamentModal\Models\Modal;
+use PhpParser\Node\Stmt\Block;
 
 class ModalResource extends Resource
 {
@@ -32,6 +36,35 @@ class ModalResource extends Resource
                             ->label('Nom')
                             ->required()
                             ->placeholder('Nom du modal'),
+
+                        Builder::make('content')
+                            ->label('Contenu')
+                            ->schema([
+                                Builder\Block::make('text')
+                                    ->label('Texte')
+                                    ->schema([
+                                       RichEditor::make('content')
+                                            ->label('Contenu'),
+                                    ]),
+
+                                Builder\Block::make('image')
+                                    ->label('Image')
+                                    ->schema([
+                                        FileUpload::make('image')
+                                            ->label('Image'),
+                                        TextInput::make('alt')
+                                            ->label('Texte alternatif'),
+                                    ]),
+
+                                Builder\Block::make('link')
+                                    ->label('Lien')
+                                    ->schema([
+                                        TextInput::make('label')
+                                            ->label('Label'),
+                                        TextInput::make('link')
+                                            ->label('Lien'),
+                                    ]),
+                            ])
                     ]),
             ]);
     }

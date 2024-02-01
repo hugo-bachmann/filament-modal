@@ -19,6 +19,7 @@
         "php": "^8.1",
         "filament/filament": "^3.2",
         "illuminate/contracts": "^10.0",
+        "livewire/livewire": "^3.4",
         "spatie/laravel-package-tools": "^1.14.0"
     },
     "require-dev": {
