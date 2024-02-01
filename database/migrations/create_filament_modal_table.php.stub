@@ -8,11 +8,11 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('filament_modal_table', function (Blueprint $table) {
+        Schema::create('filament_modals', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
+            $table->string('name');
+            $table->json('content')->nullable();
+            $table->boolean('full_screen')->default(false);
             $table->timestamps();
         });
     }

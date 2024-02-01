@@ -19,7 +19,7 @@ class FilamentModalServiceProvider extends PackageServiceProvider
             ->name('filament-modal')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_filament-modal_table')
+            ->hasMigration('create_filament_modal_table')
             ->hasCommand(FilamentModalCommand::class);
     }
 }
