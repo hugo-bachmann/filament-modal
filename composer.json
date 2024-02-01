@@ -1,6 +1,7 @@
 {
     "name": "hugobachmann/filament-modal",
-    "description": "This is my package filament-modal",
+    "description": "Simple modal for Filament with Livewire and Alpine.js",
+    "version": "0.1.0",
     "keywords": [
         "Hugo Bachmann",
         "laravel",
@@ -17,9 +18,9 @@
     ],
     "require": {
         "php": "^8.1",
-        "filament/filament": "^3.2",
+        "filament/filament": "^3.0",
         "illuminate/contracts": "^10.0",
-        "livewire/livewire": "^3.4",
+        "livewire/livewire": "^3.0",
         "spatie/laravel-package-tools": "^1.14.0"
     },
     "require-dev": {
