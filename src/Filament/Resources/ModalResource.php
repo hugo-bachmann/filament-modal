@@ -17,7 +17,6 @@ use HugoBachmann\FilamentModal\Filament\Resources\ModalResource\CreateModal;
 use HugoBachmann\FilamentModal\Filament\Resources\ModalResource\EditModal;
 use HugoBachmann\FilamentModal\Filament\Resources\ModalResource\ListModal;
 use HugoBachmann\FilamentModal\Models\Modal;
-use PhpParser\Node\Stmt\Block;
 
 class ModalResource extends Resource
 {
@@ -48,12 +47,12 @@ class ModalResource extends Resource
 
     public static function getNavigationIcon(): ?string
     {
-        return config('filament-starter.icons.activate_nav_icon') ? 'filament-starter.icons.nav_icon' : '';
+        return config('filament-modal.icons.activate_nav_icon') ? 'filament-modal.icons.nav_icon' : '';
     }
 
     public static function getNavigationSort(): ?int
     {
-        return (int) config('filament-starter.sorts.posts',20);
+        return (int) config('filament-modal.sorts.posts',20);
     }
 
 
