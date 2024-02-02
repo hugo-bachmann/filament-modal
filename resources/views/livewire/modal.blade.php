@@ -19,10 +19,17 @@
                        @break
 
                       @case('image')
-                            <div>
+                            <div class="mb-8">
                                  <img class="rounded" src="{{ $item['data']['image'] }}" alt="{{ $item['data']['alt'] }}">
                             </div>
                        @break
+
+                      @case('link')
+                            <div class="text-center">
+                                <a class="px-4 py-2 rounded {{ $item['data']['customClasses'] }}" href="{{ $item['data']['link'] }}" class="text-blue-500">{{ $item['data']['label'] }}</a>
+                            </div>
+                        @break
+
 
                    @endswitch
 

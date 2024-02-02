@@ -94,6 +94,8 @@ class ModalResource extends Resource
                                             ->label('Label'),
                                         TextInput::make('link')
                                             ->label('Lien'),
+                                        TextInput::make('customClasses')
+                                            ->label('Classes personnalisées'),
                                     ]),
                             ])
                     ]),
