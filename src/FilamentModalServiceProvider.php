@@ -27,6 +27,6 @@ class FilamentModalServiceProvider extends PackageServiceProvider
 
     public function bootingPackage(): void
     {
-        Livewire::component('filament-modalw::modal', Modal::class);
+        Livewire::component('filament-modal::modal', Modal::class);
     }
 }

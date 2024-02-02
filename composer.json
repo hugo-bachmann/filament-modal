@@ -1,7 +1,7 @@
 {
     "name": "hugobachmann/filament-modal",
     "description": "Simple modal for Filament with Livewire and Alpine.js",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "keywords": [
         "Hugo Bachmann",
         "laravel",
