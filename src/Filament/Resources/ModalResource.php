@@ -26,6 +26,37 @@ class ModalResource extends Resource
         return Modal::class;
     }
 
+    public static function getLabel(): string
+    {
+        return config('filament-modal.labels.modal');
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return config('filament-modal.labels.modals');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return config('filament-modal.labels.nav_modal');
+    }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return config('filament-modal.groups.modals');
+    }
+
+    public static function getNavigationIcon(): ?string
+    {
+        return config('filament-starter.icons.activate_nav_icon') ? 'filament-starter.icons.nav_icon' : '';
+    }
+
+    public static function getNavigationSort(): ?int
+    {
+        return (int) config('filament-starter.sorts.posts',20);
+    }
+
+
     public static function form(Form $form): Form
     {
         return $form
