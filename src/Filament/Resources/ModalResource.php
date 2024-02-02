@@ -47,7 +47,7 @@ class ModalResource extends Resource
 
     public static function getNavigationIcon(): ?string
     {
-        return config('filament-modal.icons.activate_nav_icon') ? 'filament-modal.icons.nav_icon' : '';
+        return config('filament-modal.icons.activate_nav_icon') ? config('filament-modal.icons.nav_icon') : '';
     }
 
     public static function getNavigationSort(): ?int
