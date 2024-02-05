@@ -32,3 +32,9 @@ Ajouter le plugin à Filament dans le fichier AdminPanelProvider.php
    new FilamentModalPlugin(),
 ])
 ```
+
+Afficher une modal dans une vue
+
+```php
+<livewire:filament-modal::modal :modal-id="{{ $modalId }}"/>
+```
